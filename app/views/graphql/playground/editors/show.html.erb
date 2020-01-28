@@ -8,7 +8,8 @@
   root.classList.add('playgroundIn');
 
   GraphQLPlayground.init(root, {
-    endpoint: "<%= params[:graphql_path] %>"
+    endpoint: "<%= params[:graphql_path] %>",
+    subscriptionEndpoint: "ws://<%= params[:host_with_port] %>/<%= params[:graphql_subscription_path] %>"
   })
 });
 </script>
